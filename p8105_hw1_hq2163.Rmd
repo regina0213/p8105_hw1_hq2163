@@ -85,3 +85,27 @@ plot_df = tibble(
 * the mean of x is `r mean(plot_df$x)`
 * the median of x is `r median(plot_df$x)`
 * the proportion of cases for which the logical vector is TRUE is `r sum(plot_df$vec_logical2)/1000`
+
+### Make a scatterplot of y vs x:
+
+```{r}
+ggplot(plot_df, aes(x , y, color=vec_logical2))+ geom_point()
+```
+
+###The first picture is a scatterplot of y vs vec_logical2. The red spots represent x+y<0(vec_logical2=FALSE) and the green spots represent x+y>0(vec_logical2=TRUE.)
+
+```{r}
+ggsave("logical_plot.tiff")
+```
+
+```{r}
+ggplot(plot_df, aes(x , y, color=vec_numeric2))+ geom_point()
+```
+
+###The second picture is a scatterplot of y vs vec_numeric2. The dark blue spots represent vec_numeric2=0 and the light blue spots represent vec_numeric2=1.
+
+```{r}
+ggplot(plot_df, aes(x , y, color=vec_factor2))+ geom_point()
+```
+
+###The third picture is a scatterplot of y vs vec_factor2. The red spots represent vec_factor2=FALSE and the green spots represent vec_factor2=TRUE.
