@@ -27,3 +27,15 @@ dataframe_problem1 = tibble(
   vec_factor = factor(c("football", "basketball", "baseball", "ice_hockey", "football", "basketball", "baseball", "ice_hockey", "football", "basketball"))
 )
 ```
+### Try to take the mean of each variable in my dataframe:
+
+```{r vec_mean}
+mean(dataframe_problem1$vec_numeric)
+mean(dataframe_problem1$vec_logical)
+mean(dataframe_problem1$vec_char)
+mean(dataframe_problem1$vec_factor)
+```
+
+* It shows that the mean of vec_numeric is `r mean(dataframe_problem1$vec_numeric)`
+* It shows that the mean of vec_logical is `r mean(dataframe_problem1$vec_logical)`
+* It shows that mean function can work well for numeric and logical vectors but doesn't work for    characteristic vectors and vectors as factors.
