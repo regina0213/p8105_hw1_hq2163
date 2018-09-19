@@ -48,3 +48,13 @@ as.numeric(dataframe_problem1$vec_char)
 as.numeric(dataframe_problem1$vec_factor)
 ```
 
+###convert my character variable from character to factor to numeric
+###convert my factor variable from factor to character to numeric
+
+```{r convert_variables}
+newvec_factor = as.factor(dataframe_problem1$vec_char)
+as.numeric(newvec_factor)
+newvec_char = as.character(dataframe_problem1$vec_factor)
+as.numeric(newvec_char)
+```
+
