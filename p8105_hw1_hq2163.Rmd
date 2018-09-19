@@ -1,0 +1,29 @@
+---
+title: "p8105_hw1_hq2163"
+author: "Hanbo Qiu"
+date: "September 18, 2018"
+output: github_document
+---
+
+Problem 1  
+------------------------------------------------------------
+
+###This problem focuses on variable types and coercion.
+
+### Create a data frame for Problem 1:
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+```
+
+```{r creat_dataframe}
+set.seed(2163)
+
+dataframe_problem1 = tibble(
+  vec_numeric = rnorm(10, sd = 5),
+  vec_logical = vec_numeric > 2,
+  vec_char = c("Please", "list", "the", "American", "people's", "top", "four", "most", "popular", "sports"),
+  vec_factor = factor(c("football", "basketball", "baseball", "ice_hockey", "football", "basketball", "baseball", "ice_hockey", "football", "basketball"))
+)
+```
