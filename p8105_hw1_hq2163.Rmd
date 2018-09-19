@@ -58,3 +58,23 @@ newvec_char = as.character(dataframe_problem1$vec_factor)
 as.numeric(newvec_char)
 ```
 
+Problem 2  
+------------------------------------------------------------
+
+###This problem focuses on plotting and the use of inline R code.
+
+### Create a data frame for Problem 2:
+
+```{r, include = FALSE}
+library(tidyverse)
+```
+
+```{r plot_df}
+plot_df = tibble(
+  x = rnorm(1000),
+  y = rnorm(1000),
+  vec_logical2 = (x + y) > 0,
+  vec_numeric2 = as.numeric(vec_logical2),
+  vec_factor2 = as.factor(vec_logical2)
+)
+```
