@@ -78,3 +78,10 @@ plot_df = tibble(
   vec_factor2 = as.factor(vec_logical2)
 )
 ```
+
+### A short description of my vector:
+
+* the size of the dataset is `r nrow(plot_df)`*`r ncol(plot_df)`.
+* the mean of x is `r mean(plot_df$x)`
+* the median of x is `r median(plot_df$x)`
+* the proportion of cases for which the logical vector is TRUE is `r sum(plot_df$vec_logical2)/1000`
