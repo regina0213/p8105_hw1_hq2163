@@ -39,3 +39,12 @@ mean(dataframe_problem1$vec_factor)
 * It shows that the mean of vec_numeric is `r mean(dataframe_problem1$vec_numeric)`
 * It shows that the mean of vec_logical is `r mean(dataframe_problem1$vec_logical)`
 * It shows that mean function can work well for numeric and logical vectors but doesn't work for    characteristic vectors and vectors as factors.
+
+### convert variables from one type to another:
+
+```{r eval = FALSE}
+as.numeric(dataframe_problem1$vec_logical)
+as.numeric(dataframe_problem1$vec_char)
+as.numeric(dataframe_problem1$vec_factor)
+```
+
