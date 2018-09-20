@@ -6,11 +6,11 @@ output: github_document
 ---
 
 Problem 1  
-------------------------------------------------------------
+-------------------------------------
 
 ###This problem focuses on variable types and coercion.
 
-### Create a data frame for Problem 1:
+####Create a data frame for Problem 1:
 
 ```{r setup, include = FALSE}
 knitr::opts_chunk$set(echo = TRUE)
@@ -27,7 +27,7 @@ dataframe_problem1 = tibble(
   vec_factor = factor(c("football", "basketball", "baseball", "ice_hockey", "football", "basketball", "baseball", "ice_hockey", "football", "basketball"))
 )
 ```
-### Try to take the mean of each variable in my dataframe:
+#### Try to take the mean of each variable in my dataframe:
 
 ```{r vec_mean}
 mean(dataframe_problem1$vec_numeric)
@@ -38,9 +38,9 @@ mean(dataframe_problem1$vec_factor)
 
 * It shows that the mean of vec_numeric is `r mean(dataframe_problem1$vec_numeric)`
 * It shows that the mean of vec_logical is `r mean(dataframe_problem1$vec_logical)`
-* It shows that mean function can work well for numeric and logical vectors but doesn't work for    characteristic vectors and vectors as factors.
+* It shows that mean function can work well for numeric and logical vectors but doesn't work for    characteristic vectors and factor vectors.
 
-### convert variables from one type to another:
+#### Convert variables from one type to another:
 
 ```{r eval = FALSE}
 as.numeric(dataframe_problem1$vec_logical)
@@ -48,8 +48,8 @@ as.numeric(dataframe_problem1$vec_char)
 as.numeric(dataframe_problem1$vec_factor)
 ```
 
-###convert my character variable from character to factor to numeric
-###convert my factor variable from factor to character to numeric
+####Convert my character variable from character to factor to numeric
+####Convert my factor variable from factor to character to numeric
 
 ```{r convert_variables}
 newvec_factor = as.factor(dataframe_problem1$vec_char)
@@ -63,11 +63,7 @@ Problem 2
 
 ###This problem focuses on plotting and the use of inline R code.
 
-### Create a data frame for Problem 2:
-
-```{r, include = FALSE}
-library(tidyverse)
-```
+#### Create a data frame for Problem 2:
 
 ```{r plot_df}
 plot_df = tibble(
@@ -79,20 +75,20 @@ plot_df = tibble(
 )
 ```
 
-### A short description of my vector:
+#### A short description of my vector:
 
 * the size of the dataset is `r nrow(plot_df)`*`r ncol(plot_df)`.
 * the mean of x is `r mean(plot_df$x)`
 * the median of x is `r median(plot_df$x)`
 * the proportion of cases for which the logical vector is TRUE is `r sum(plot_df$vec_logical2)/1000`
 
-### Make a scatterplot of y vs x:
+#### Make a scatterplot of y vs x:
 
 ```{r}
 ggplot(plot_df, aes(x , y, color=vec_logical2))+ geom_point()
 ```
 
-###The first picture is a scatterplot of y vs vec_logical2. The red spots represent x+y<0(vec_logical2=FALSE) and the green spots represent x+y>0(vec_logical2=TRUE.)
+####The first picture is a scatterplot of y vs x. The red spots represent x+y<0(vec_logical2=FALSE) and the green spots represent x+y>0(vec_logical2=TRUE.)
 
 ```{r}
 ggsave("logical_plot.tiff")
@@ -102,10 +98,10 @@ ggsave("logical_plot.tiff")
 ggplot(plot_df, aes(x , y, color=vec_numeric2))+ geom_point()
 ```
 
-###The second picture is a scatterplot of y vs vec_numeric2. The dark blue spots represent vec_numeric2=0 and the light blue spots represent vec_numeric2=1.
+####The second picture is a scatterplot of y vs x. The dark blue spots represent vec_numeric2=0 and the light blue spots represent vec_numeric2=1.
 
 ```{r}
 ggplot(plot_df, aes(x , y, color=vec_factor2))+ geom_point()
 ```
 
-###The third picture is a scatterplot of y vs vec_factor2. The red spots represent vec_factor2=FALSE and the green spots represent vec_factor2=TRUE.
+####The third picture is a scatterplot of y vs x. The red spots represent vec_factor2=FALSE and the green spots represent vec_factor2=TRUE.
