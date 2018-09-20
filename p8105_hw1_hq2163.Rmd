@@ -49,7 +49,7 @@ as.numeric(dataframe_problem1$vec_char)
 as.numeric(dataframe_problem1$vec_factor)
 ```
 
-####Convert my character variable from character to factor to numeric.
+####Convert my character variable from character to factor to numeric:
 
 ```{r char_factor_num}
 
@@ -60,7 +60,7 @@ newvec_numeric1 = as.numeric(
 newvec_numeric1 
 ```
 
-####Convert my factor variable from factor to character to numeric.
+####Convert my factor variable from factor to character to numeric:
 ```{r factor_char_num}
 
 newvec_numeric2 = as.numeric(
@@ -97,7 +97,7 @@ plot_df = tibble(
 #### Make a scatterplot of y vs x:
 
 ```{r}
-ggplot(plot_df, aes(x , y, color = vec_logical2))+ geom_point()
+ggplot(plot_df, aes(x , y, color = vec_logical2)) + geom_point()
 ```
 
 ####The first picture is a scatterplot of y vs x. The red spots represent x+y<0(vec_logical2=FALSE) and the green spots represent x+y>0(vec_logical2=TRUE).
@@ -107,13 +107,13 @@ ggsave("logical_plot.tiff")
 ```
 
 ```{r}
-ggplot(plot_df, aes(x , y, color = vec_numeric2))+ geom_point()
+ggplot(plot_df, aes(x , y, color = vec_numeric2)) + geom_point()
 ```
 
 ####The second picture is a scatterplot of y vs x. The dark blue spots represent vec_numeric2=0 and the light blue spots represent vec_numeric2=1.
 
 ```{r}
-ggplot(plot_df, aes(x , y, color = vec_factor2))+ geom_point()
+ggplot(plot_df, aes(x , y, color = vec_factor2)) + geom_point()
 ```
 
 ####The third picture is a scatterplot of y vs x. The red spots represent vec_factor2=FALSE and the green spots represent vec_factor2=TRUE.
